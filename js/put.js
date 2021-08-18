@@ -1,3 +1,5 @@
+import getCharacter from "get.js";
+import { countCheckerName, countCheckerShort, countCheckerDescr } from "inputChecker.js";
 
 const preparePut = async id => {
     let characterInput;
@@ -56,3 +58,5 @@ const preparePut = async id => {
         }
     });
 }
+
+export { preparePut };

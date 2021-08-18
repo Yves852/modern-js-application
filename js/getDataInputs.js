@@ -17,3 +17,5 @@ const getDataInputs = inputs => {
   // data.image is handled in put.js and post.js
   return data;
 }
+
+export { getDataInputs };

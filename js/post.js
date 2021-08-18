@@ -1,3 +1,4 @@
+import { countCheckerName, countCheckerShort, countCheckerDescr } from "inputChecker.js";
 
 const preparePost = () => {
   document.getElementById("save").addEventListener("click", async () => {
@@ -43,4 +44,6 @@ const preparePost = () => {
       console.error(error);
     }
   });
-}  
+}
+
+export { preparePost };

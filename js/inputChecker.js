@@ -1,7 +1,7 @@
 // Booleans, false if no test failed
-countCheckerName = true;
-countCheckerShort = true;
-countCheckerDescr = true;
+let countCheckerName = true;
+let countCheckerShort = true;
+let countCheckerDescr = true;
 const txt = document.querySelectorAll(".editor-input");
 
 const nameChecker = (value) => {
@@ -43,20 +43,23 @@ const descriptionChecker = (value) => {
   }
 };
 
+const addCheckAtInputEvent = () => {
+  // Add event on inputs update to trigger checking
+  txt.forEach((input) => {
+    input.addEventListener("input", (e) => {
+      switch (e.target.id) {
+        case "editor-character-name":
+          nameChecker(e.target.value);
+          break;
+        case "editor-character-short":
+          shortchecker(e.target.value);
+          break;
+        case "editor-character-description":
+          descriptionChecker(e.target.value);
+          break;
+      }
+    });  
+  });
+}
 
-// Add event on inputs update to trigger checking
-txt.forEach((input) => {
-  input.addEventListener("input", (e) => {
-    switch (e.target.id) {
-      case "editor-character-name":
-        nameChecker(e.target.value);
-        break;
-      case "editor-character-short":
-        shortchecker(e.target.value);
-        break;
-      case "editor-character-description":
-        descriptionChecker(e.target.value);
-        break;
-    }
-  });  
-});
+export { countCheckerName, countCheckerShort, countCheckerDescr, addCheckAtInputEvent };

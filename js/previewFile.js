@@ -21,3 +21,5 @@ function previewFile() {
     reader.readAsDataURL(file);
   }
 }
+
+export { base64, previewFile };

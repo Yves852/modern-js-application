@@ -20,3 +20,5 @@ const getCharacter = async (id, name) => {
     console.error(error);
   }
 }
+
+export { getCharacter };

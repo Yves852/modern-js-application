@@ -63,3 +63,5 @@ const renderOneCharacter = character => {
   target.appendChild(clone);
   target.classList.remove("cardPool");
 }
+
+export { renderListCharacters, renderOneCharacter };

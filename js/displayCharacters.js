@@ -1,8 +1,11 @@
+import getCharacter from "get.js";
+import getUrlParameter from "getUrlParameter.js";
+import { renderListCharacters, renderOneCharacter } from "renderCharacter.js";
+
 /* Function creating cards from template and filling with data */
 const displayCharacters = async name => {
   // Check if an id is sent in url or a name by paramerer and use it on getCharacter
-  const params = new URLSearchParams(window.location.search);
-  const idUrl = params.get("id");
+  const idUrl = getUrlParameter("id");
   let nameParam = name ? name : "";
   const characters = idUrl 
     ? await getCharacter(idUrl, null) 
@@ -24,3 +27,5 @@ const displayCharacters = async name => {
     renderOneCharacter(characters);
   }
 }
+
+export { displayCharacters };

@@ -13,4 +13,4 @@ const getUrlParameter = key => {
   return result;
 }
 
-export { getUrlParameter }
+export { getUrlParameter };
