@@ -7,5 +7,5 @@ This website is a character manager. It allow to list, add, update and delete ch
 Soon!  
 ## Link to the website  
 Soon!  
-### The reason  
-This project is an exercice made in group with Becode :)  
+### About this version and repository  
+Repository using Challenge Manager to work on enhancement with JS
