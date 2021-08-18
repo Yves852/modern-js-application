@@ -2,26 +2,6 @@ let characterInput;
 let base64 = "";
 
 // Retrieve inut with image and transform it to an base 64 url
-const imgFileToBase64 = function (e) {    
-  const preview = document.querySelector('.preview');
-  const input = e.target;
-  //const file = document.querySelector('#editor-character-name');
-  const reader = new FileReader();
-  let imgUrl64 = "";
-
-  reader.addEventListener("load", function () {
-    // convert image file to base64 string
-    imgUrl64 = reader.result;    
-    preview.src = imgUrl64;
-    // Add into character
-    characterInput.image = imgUrl64.split(",")[1]; //.slice(21, imgUrl64.length);
-  });
-
-  if (input.files[0]) {
-    reader.readAsDataURL(input.files[0]);     
-  }
-}
-
 function previewFile() {
   const preview = document.querySelector("img");
   const file = document.querySelector("input[type=file]").files[0];
@@ -42,7 +22,7 @@ function previewFile() {
     reader.readAsDataURL(file);
   }
 }
-
+// Loop inputs and return an data object of their values
 const getDataInputs = inputs => {
   let data = {};
   inputs.forEach(input => {
@@ -62,24 +42,27 @@ const getDataInputs = inputs => {
   return data;
 }
 
-
-// From post to edit
+// When click on image preview, open file picker window
 document.getElementById('uploadImage').addEventListener('click', ()=>{
   document.querySelector("input[type=file").click()
 })
 
-countChecker = "";
+// Booleans, false if no test failed
+countCheckerName = true;
+countCheckerShort = true;
+countCheckerDescr = true;
 const txt = document.querySelectorAll(".editor-input");
+
 const nameChecker = (value) => {
   document.getElementById(
     "name-count"
   ).innerHTML = `${value.length} on max 20 char.`;
   if (value.length > 20) {
     document.getElementById("name-count").style.color = "red";
-    countChecker = true;
+    countCheckerName = true;
   } else {
     document.getElementById("name-count").style.color = "white";
-    countChecker = false;
+    countCheckerName = false;
   }
 };
 
@@ -89,25 +72,28 @@ const shortchecker = (value) => {
   ).innerHTML = `${value.length} on max 70 char.`;
   if (value.length > 70) {
     document.getElementById("short-count").style.color = "red";
-    countChecker = true;
+    countCheckerShort = true;
   } else {
     document.getElementById("short-count").style.color = "white";
-    countChecker = false;
+    countCheckerShort = false;
   }
 };
+
 const descriptionChecker = (value) => {
   document.getElementById(
     "desc-count"
   ).innerHTML = `${value.length} on max 350 char.`;
   if (value.length > 350) {
     document.getElementById("desc-count").style.color = "red";
-    countChecker = true;
+    countCheckerDescr = true;
   } else {
     document.getElementById("desc-count").style.color = "white";
-    countChecker = false;
+    countCheckerDescr = false;
   }
 };
 
+
+// Add event on inputs update to trigger checking
 txt.forEach((input) => {
   input.addEventListener("input", (e) => {
     switch (e.target.id) {
@@ -121,11 +107,9 @@ txt.forEach((input) => {
         descriptionChecker(e.target.value);
         break;
     }
-  });
+  });  
 });
-//
 
-// 
 let idUrl;
 
 (() => {
@@ -135,10 +119,6 @@ let idUrl;
 
   // If an id is retrieved, use put to update character
   // Else post to create a new character
-  if(idUrl){
-    preparePut(idUrl);   // post.js
-  }
-  else {
-    preparePost();  // put.js
-  }
+  if(idUrl){ preparePut(idUrl); }
+  else { preparePost(); }
 })();
