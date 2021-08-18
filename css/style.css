@@ -1,0 +1,189 @@
+/* Global style */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  color: white;
+  padding: 2em;
+  padding-left: 4em;
+  padding-right: 4em;
+  /* #4B4EA2  #E14444 */
+  background-image: linear-gradient(to right, #4b4ea2, #e14444);
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Permanent Marker", cursive;
+}
+hr {
+  border: white solid 1px;
+}
+.centerContent {
+  text-align: center;
+}
+.btn {
+  color: inherit;
+  background-color: #4b7cfb;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+/* Cards style */
+.cardPool {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.card {
+  background-color: #363333;
+  border-radius: 30px;
+  padding: 2em;
+  margin-top: 2em;
+  font-family: "Roboto", sans-serif;
+}
+.card--pool {
+  width: 250px;
+}
+.card--alone {
+  padding: 4em;
+}
+.card__img {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  border: none;
+}
+.card__button {
+  background-color: inherit;
+  border: solid white 1px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+.card__button--addnew {
+  border: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: initial;
+  padding-left: 2em;
+  padding-right: 2em;
+  font-size: x-large;
+}
+.card__p {
+  height: 200px;
+}
+
+/* Editor style */
+.editor {
+  display: flex;
+
+  align-self: center;
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+  background-color: #363333;
+  padding: 5rem;
+  width: 80vw;
+  height: fit-content;
+  border-radius: 20px;
+}
+.edit-btn {
+  width: 200px;
+  height: 40px;
+  margin: 2em 1em;
+  border: none;
+  font-style: oblique;
+  font-weight: bold;
+  font-size: medium;
+}
+.editor-input {
+  background-color: #948f8f;
+  color: white;
+  border-radius: 15px;
+  padding: 5px;
+  border: none;
+  margin: 5px;
+  width: 83vw;
+}
+#uploadImage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#preview {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  border: solid 3px white;
+  cursor: pointer;
+}
+#pre{
+  position: absolute;
+
+}
+img {
+  cursor: pointer;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  z-index: 99999;
+  
+}
+
+#editor-character-description {
+  height: 150px;
+  text-align: left;
+  overflow-wrap: normal;
+}
+#editor-character-short {
+  height: 50px;
+}
+#editor-character-name {
+  height: 70px;
+  font-size: 40px;
+}
+#save {
+  border: none;
+  font-weight: 600;
+  font-style: italic;
+  color: white;
+}
+#delete {
+  background-color: #363333;
+  color: #bf3a30;
+  border: solid 1px #bf3a30;
+}
+#img-preview {
+  border-radius: 50%;
+  border-color: white;
+}
+.form {
+  display: none;
+}
+.preview {
+  border: white;
+  border-radius: 50%;
+}
+.input-div {
+  position: relative;
+}
+
+#name-count,
+#desc-count,
+#short-count {
+  position: absolute;
+  right: 20px;
+  bottom: 20%;
+}

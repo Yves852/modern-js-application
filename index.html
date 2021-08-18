@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet"> 
+    <!-- Style -->
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Character manager</title>
+</head>
+<body>
+    <header>
+        <h1>Character manager</h1>
+        <hr>
+        <input type="search" name="search-bar" id="search-bar" placeholder="Search name with at least 3 letters">
+    </header>
+    <template id="template">
+        <article class="card card--pool">
+            <img class="card__img" src="" alt="">
+            <h3 class="card__h3"></h3>
+            <p class="card__p"></p>
+            <button class="btn card__button">See character</button>
+        </article>
+    </template>
+    <section class="cardPool" id="pool">
+    </section>
+    <button class="btn card__button--addnew" id="addBtn">Add a new character to the collection</button>
+    
+    <script src="./js/get.js"></script>
+    <script src="./js/delete.js"></script>
+    <script src="./js/index.js"></script>
+    
+</body>
+</html>

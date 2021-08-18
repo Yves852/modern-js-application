@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Character Editor</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="character-manager">Character manager</h1>
+    </header>
+    <section class="editor">
+      <div id="uploadImage">
+        <div id="preview">
+          <img src="" >
+          <p id="pre">preview</p>
+        </div>
+        <p>Upload Image</p>
+      </div>
+      <form class="form" id="imageInput">
+        <input type="file" onchange="previewFile()" /><br />
+      </form>
+      <div class="input-div">
+        <input
+          type="text"
+          class="editor-input"
+          id="editor-character-name"
+          placeholder="Character name"
+        />
+        <p id="name-count">0 on max 20 char.</p>
+      </div>
+      <div class="input-div">
+        <input
+          type="text"
+          class="editor-input"
+          id="editor-character-short"
+          placeholder="Short description"
+        />
+        <p id="short-count">0 on max 70 char.</p>
+      </div>
+      <div class="input-div">
+        <input
+          type="text"
+          class="editor-input"
+          id="editor-character-description"
+          placeholder="Descritpion"
+        />
+        <p id="desc-count">0 on max 350 char.</p>
+      </div>
+      <div>
+        <button class="btn edit-btn" id="save">Save changes</button>
+        <button class="btn edit-btn" id="delete">Delete character</button>
+      </div>
+    </section>
+  </body>
+  <script src="../js/get.js"></script>
+  <script src="../js/post.js"></script>
+  <script src="../js/put.js"></script>
+  <script src="../js/edit.js"></script>
+</html>
