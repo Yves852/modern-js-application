@@ -1,5 +1,6 @@
 
 const preparePut = async id => {
+    let characterInput;
     const inputs = Array.from(document.querySelectorAll("input"));
     const image = document.getElementById("editor-character-name");
     
