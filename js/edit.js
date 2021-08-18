@@ -1,7 +1,7 @@
-import getUrlParameter from "getUrlParameter.js";
-import preparePost from "post.js";
-import preparePut from "put.js";
-import addCheckAtInputEvent from "inputChecker.js";
+import getUrlParameter from "./getUrlParameter.js";
+import preparePost from "./post.js";
+import preparePut from "./put.js";
+import addCheckAtInputEvent from "./inputChecker.js";
 
 // When click on image preview, open file picker window
 document.getElementById('uploadImage').addEventListener('click', ()=>{

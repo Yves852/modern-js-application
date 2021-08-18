@@ -1,6 +1,6 @@
-import getCharacter from "get.js";
-import getUrlParameter from "getUrlParameter.js";
-import { renderListCharacters, renderOneCharacter } from "renderCharacter.js";
+import getCharacter from "./get.js";
+import getUrlParameter from "./getUrlParameter.js";
+import { renderListCharacters, renderOneCharacter } from "./renderCharacter.js";
 
 /* Function creating cards from template and filling with data */
 const displayCharacters = async name => {

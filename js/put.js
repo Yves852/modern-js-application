@@ -1,5 +1,5 @@
-import getCharacter from "get.js";
-import { countCheckerName, countCheckerShort, countCheckerDescr } from "inputChecker.js";
+import getCharacter from "./get.js";
+import { countCheckerName, countCheckerShort, countCheckerDescr } from "./inputChecker.js";
 
 const preparePut = async id => {
     let characterInput;

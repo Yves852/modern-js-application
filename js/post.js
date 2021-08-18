@@ -1,4 +1,4 @@
-import { countCheckerName, countCheckerShort, countCheckerDescr } from "inputChecker.js";
+import { countCheckerName, countCheckerShort, countCheckerDescr } from "./inputChecker.js";
 
 const preparePost = () => {
   document.getElementById("save").addEventListener("click", async () => {

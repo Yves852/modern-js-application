@@ -1,4 +1,4 @@
-import displayCharacters from "displayCharacters.js";
+import displayCharacters from "./displayCharacters.js";
 
 // Semaphore to control access to checkBarGet()
 let researchRequestSemaphore = true;
