@@ -1,10 +1,8 @@
-import displayCharacters from "./displayCharacters.js";
+import { displayCharacters } from "./displayCharacters.js";
 
 // Semaphore to control access to checkBarGet()
 let researchRequestSemaphore = true;
 const searchBar = document.getElementById("search-bar");
-const target = document.getElementById("pool");
-const template = document.getElementById("template");
 
 // When triggered, check if the searched string is > 2 of empty to make a get request
 const checkBarGet = ()=>{
