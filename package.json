@@ -1,0 +1,23 @@
+{
+  "name": "modern-js-application",
+  "version": "1.0.0",
+  "description": "Yves T, Thibaut G   ## About the project   This website is a character manager. It allow to list, add, update and delete characters from a database.   ## Publishing   Soon!   ## Link to the website   Soon!   ### About this version and repository   Repository using Challenge Manager to work on enhancement with JS",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx seve -e '*.json,*.md,node_modules,_shared' -p 8000 -i ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yves852/modern-js-application.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yves852/modern-js-application/issues"
+  },
+  "homepage": "https://github.com/Yves852/modern-js-application#readme",
+  "devDependencies": {
+    "seve": "^0.10.0"
+  }
+}
