@@ -19,7 +19,9 @@
   },
   "homepage": "https://github.com/Yves852/modern-js-application#readme",
   "devDependencies": {
-    "seve": "^0.10.0"
+    "seve": "^0.10.0",
+    "webpack": "^5.51.0",
+    "webpack-cli": "^4.8.0"
   },
   "dependencies": {
     "lodash": "^4.17.21"
