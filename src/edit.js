@@ -4,13 +4,14 @@ import { preparePut } from "./put.js";
 import { addCheckAtInputEvent } from "./inputChecker.js";
 import { previewFile } from "./previewFile.js";
 
-
 const prepareEdit = () => {
   // When click on image preview, open file picker window
-  document.getElementById('uploadImage').addEventListener('click', ()=>{
-    document.querySelector("input[type=file").click()
+  document.getElementById("uploadImage").addEventListener("click", () => {
+    document.querySelector("input[type=file").click();
   });
-  document.getElementById('image-input').addEventListener('change', previewFile);
+  document
+    .getElementById("image-input")
+    .addEventListener("change", previewFile);
 
   // Check if an id is sent in url and use it
   const idUrl = getUrlParameter("id");
@@ -18,8 +19,11 @@ const prepareEdit = () => {
   addCheckAtInputEvent();
   // If an id is retrieved, use put to update character
   // Else post to create a new character
-  if(idUrl){ preparePut(idUrl); }
-  else { preparePost(); }
+  if (idUrl) {
+    preparePut(idUrl);
+  } else {
+    preparePost();
+  }
 };
 
 export { prepareEdit };

@@ -5,20 +5,27 @@ const getCharacter = async (id, name) => {
   // Id to get a single character
   // Else get all characters
   let param = "";
-  if( id && ( !name || name.length < 1 )) { param = id; }
-  else if(( !id || id.length < 1 ) && name ) { param = `?name=${name}`; }
+  if (id && (!name || name.length < 1)) {
+    param = id;
+  } else if ((!id || id.length < 1) && name) {
+    param = `?name=${name}`;
+  }
 
   try {
-    let result = await window.fetch(`https://character-database.becode.xyz/characters/${param}`, { 
-      method: "GET",
-    });
-    if(!result.ok){ throw new Error( `${result.status} ${result.statusText}`); }
+    let result = await window.fetch(
+      `https://character-database.becode.xyz/characters/${param}`,
+      {
+        method: "GET",
+      }
+    );
+    if (!result.ok) {
+      throw new Error(`${result.status} ${result.statusText}`);
+    }
     let characters = await result.json();
-    return  characters;
-  }
-  catch(error) {
+    return characters;
+  } catch (error) {
     console.error(error);
   }
-}
+};
 
 export { getCharacter };

@@ -1,8 +1,8 @@
 // Loop inputs and return an data object of their values
-const getDataInputs = inputs => {
+const getDataInputs = (inputs) => {
   let data = {};
-  inputs.forEach(input => {
-    switch(input.id){
+  inputs.forEach((input) => {
+    switch (input.id) {
       case "editor-character-name":
         data.name = input.value;
         break;
@@ -16,6 +16,6 @@ const getDataInputs = inputs => {
   });
   // data.image is handled in put.js and post.js
   return data;
-}
+};
 
 export { getDataInputs };
