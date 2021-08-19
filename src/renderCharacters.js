@@ -10,7 +10,7 @@ const renderListCharacters = (target, characters) => {
     let clone = template.content.cloneNode(true);
     clone.querySelector(".card__button").addEventListener("click", ()=>{
       // Onclick, Open a new tab of index.html with the character id as parameter
-      window.open(`index.html?id=${character.id}`, '_blank');
+      window.open(`./index.html?id=${character.id}`, '_blank');
     });
     clone.querySelector(".card__img").src = `data:image/png;base64,${character.image}`;
     clone.querySelector(".card__h3").innerHTML = character.name;
@@ -44,7 +44,7 @@ const renderOneCharacter = (target, character) => {
   // Add click events, update open new tab and delete handle deletion
   btnUpdate.addEventListener("click", ()=>{
     // replace actual page with edit.html
-    window.open(`./html/edit.html?id=${character.id}`, '_self');
+    window.open(`./edit.html?id=${character.id}`, '_self');
   });
   btnDelete.addEventListener("click", () => {
     del(character.id);

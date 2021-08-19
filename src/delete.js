@@ -3,7 +3,7 @@ const del = async id => {
   if (r == true){
     try {
       const del = await fetch(`https://character-database.becode.xyz/characters/${id}`, { method: 'DELETE' });
-      window.open('index.html', '_self');
+      window.open('./index.html', '_self');
     }
     catch(error) { console.error(error); }
   }

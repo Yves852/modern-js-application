@@ -36,7 +36,7 @@ const preparePost = () => {
       );
       const newcharacter = await response.json();    
       alert("Your character has been registered, you will be directed to the home page");
-      window.open("../index.html", "_self");
+      window.open("./index.html", "_self");
     }
     catch(error) {
       console.error(error);
