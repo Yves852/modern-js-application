@@ -9,3 +9,5 @@ const del = async id => {
   }
   else { return; }
 }
+
+export { del };

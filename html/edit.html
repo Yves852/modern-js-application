@@ -14,39 +14,24 @@
     <section class="editor">
       <div id="uploadImage">
         <div id="preview">
-          <img src="" >
+          <img id="image-preview" src="" >
           <p id="pre">preview</p>
         </div>
         <p>Upload Image</p>
       </div>
-      <form class="form" id="imageInput">
-        <input type="file" onchange="previewFile()" /><br />
+      <form class="form" id="imageInputForm">
+        <input type="file" id="image-input" /><br />
       </form>
       <div class="input-div">
-        <input
-          type="text"
-          class="editor-input"
-          id="editor-character-name"
-          placeholder="Character name"
-        />
+        <input type="text" class="editor-input" id="editor-character-name" placeholder="Character name" />
         <p id="name-count">0 on max 20 char.</p>
       </div>
       <div class="input-div">
-        <input
-          type="text"
-          class="editor-input"
-          id="editor-character-short"
-          placeholder="Short description"
-        />
+        <input type="text" class="editor-input" id="editor-character-short" placeholder="Short description" />
         <p id="short-count">0 on max 70 char.</p>
       </div>
       <div class="input-div">
-        <input
-          type="text"
-          class="editor-input"
-          id="editor-character-description"
-          placeholder="Descritpion"
-        />
+        <input type="text" class="editor-input" id="editor-character-description" placeholder="Descritpion" />
         <p id="desc-count">0 on max 350 char.</p>
       </div>
       <div>
@@ -55,8 +40,15 @@
       </div>
     </section>
   </body>
-  <script src="../js/get.js"></script>
-  <script src="../js/post.js"></script>
-  <script src="../js/put.js"></script>
-  <script src="../js/edit.js"></script>
+  <script type="module" src="../js/renderCharacters.js"></script>
+  <script type="module" src="../js/put.js"></script>
+  <script type="module" src="../js/previewFile.js"></script>
+  <script type="module" src="../js/post.js"></script>
+  <script type="module" src="../js/inputChecker.js"></script>
+  <script type="module" src="../js/getUrlParameter.js"></script>
+  <script type="module" src="../js/getDataInputs.js"></script>
+  <script type="module" src="../js/get.js"></script>
+  <script type="module" src="../js/displayCharacters.js"></script>
+  <script type="module" src="../js/delete.js"></script>
+  <script type="module" src="../js/edit.js"></script>
 </html>
