@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import { displayCharacters } from "./displayCharacters.js";
 
 // Semaphore to control access to checkBarGet()
