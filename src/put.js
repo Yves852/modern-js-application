@@ -57,7 +57,7 @@ const preparePut = async id => {
           },
           body: JSON.stringify(dataCharacter)
         });
-        window.open(`../index.html?id=${id}`, '_self');
+        window.open(`./index.html?id=${id}`, '_self');
       }
       catch(error) {
         console.error(error);
