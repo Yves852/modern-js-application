@@ -8,4 +8,6 @@ Soon!
 ## Link to the website  
 Soon!  
 ### About this version and repository  
-Repository using Challenge Manager to work on enhancement with JS
+Repository using Challenge Manager to work on enhancement with JS  
+### Changelog  
+This project use now webpack :)
