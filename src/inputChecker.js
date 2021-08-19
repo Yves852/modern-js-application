@@ -58,8 +58,13 @@ const addCheckAtInputEvent = () => {
           descriptionChecker(e.target.value);
           break;
       }
-    });  
+    });
   });
-}
+};
 
-export { countCheckerName, countCheckerShort, countCheckerDescr, addCheckAtInputEvent };
+export {
+  countCheckerName,
+  countCheckerShort,
+  countCheckerDescr,
+  addCheckAtInputEvent,
+};
