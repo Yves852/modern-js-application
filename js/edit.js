@@ -1,12 +1,14 @@
-import getUrlParameter from "./getUrlParameter.js";
-import preparePost from "./post.js";
-import preparePut from "./put.js";
-import addCheckAtInputEvent from "./inputChecker.js";
+import { getUrlParameter } from "./getUrlParameter.js";
+import { preparePost } from "./post.js";
+import { preparePut } from "./put.js";
+import { addCheckAtInputEvent } from "./inputChecker.js";
+import { previewFile } from "./previewFile.js";
 
 // When click on image preview, open file picker window
 document.getElementById('uploadImage').addEventListener('click', ()=>{
   document.querySelector("input[type=file").click()
-})
+});
+document.getElementById('image-input').addEventListener('change', previewFile);
 
 (() => {
   // Check if an id is sent in url and use it

@@ -1,9 +1,9 @@
 let base64 = "";
 
 // Retrieve inut with image and transform it to an base 64 url
-function previewFile() {
-  const preview = document.querySelector("img");
-  const file = document.querySelector("input[type=file]").files[0];
+const previewFile = () => {
+  const preview = document.getElementById("image-preview");
+  const file = document.getElementById("image-input").files[0];
   const reader = new FileReader();
 
   reader.addEventListener(

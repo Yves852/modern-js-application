@@ -1,7 +1,10 @@
-// Take a list of character and render on screen
-const renderListCharacters = characters => {
+import { del } from './delete.js';
+
+const template = document.getElementById("template");
+/* Function creating cards from template and filling with data */
+const renderListCharacters = (target, characters) => {
   // Check if target has class cardPool and add it
-  if(!target.classList.contains("cardPool")) { target.classList.add("cardPool"); }
+  if(!target.classList || !target.classList.contains("cardPool")) { target.classList.add("cardPool"); }
   // Loop on characters, create cards and add them to target
   characters.forEach((character) => {
     let clone = template.content.cloneNode(true);
@@ -17,7 +20,7 @@ const renderListCharacters = characters => {
 }
 
 // Take ont character and render on screen
-const renderOneCharacter = character => {
+const renderOneCharacter = (target, character) => {
   // Create card from template
   let clone = template.content.cloneNode(true);
   clone.children[0].appendChild(document.createElement("p")); 
