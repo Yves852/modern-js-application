@@ -1,6 +1,6 @@
 import { getCharacter } from "./get.js";
 import { countCheckerName, countCheckerShort, countCheckerDescr } from "./inputChecker.js";
-import { base64, previewFile } from "./previewFile.js";
+import { base64 } from "./previewFile.js";
 import { getDataInputs } from "./getDataInputs.js";
 
 const preparePut = async id => {
@@ -37,8 +37,8 @@ const preparePut = async id => {
 
     document.getElementById('save').addEventListener('click', async () => {
       let inputValues = inputs.map(({ value }) => value.trim());
-      if(base64 == "") { base64 = image.src.split(",")[1]; }
-      let dataCharacter = { "image": base64, ...getDataInputs(inputs) };
+      let imgUrl = image.src.split(",")[1].toString();
+      let dataCharacter = { "image": imgUrl, ...getDataInputs(inputs) };
       // Check if nothing missing and characters limits 
       if (inputValues.some((value) => value === "")) {
         alert("you must fill all the forms!");
