@@ -12,3 +12,4 @@ Repository using Challenge Manager to work on enhancement with JS
 ### Changelog  
 This project use now webpack :)  
 And is checked with ESLint and Prettier :)
+And its css is preprocessed with Sass :)
