@@ -113,11 +113,13 @@ hr {
   width: 83vw;
 }
 #uploadImage {
+  /* .uploadImage */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 #preview {
+  /* .uploadImage__preview */
   position: relative;
   display: flex;
   align-items: center;
@@ -129,9 +131,12 @@ hr {
   border: solid 3px white;
   cursor: pointer;
 }
-#pre{
+#preview > p {
   position: absolute;
-
+}
+#pre {
+  /* Removed */
+  position: absolute;
 }
 img {
   cursor: pointer;
@@ -139,7 +144,6 @@ img {
   width: 150px;
   height: 150px;
   z-index: 99999;
-  
 }
 
 #editor-character-description {
@@ -166,6 +170,7 @@ img {
   border: solid 1px #bf3a30;
 }
 #img-preview {
+  /* Unused*/
   border-radius: 50%;
   border-color: white;
 }
@@ -173,6 +178,7 @@ img {
   display: none;
 }
 .preview {
+  /* Redundant with #preview */
   border: white;
   border-radius: 50%;
 }
