@@ -2,7 +2,7 @@
 let countCheckerName = true;
 let countCheckerShort = true;
 let countCheckerDescr = true;
-const txt = document.querySelectorAll(".editor-input");
+const txt = document.querySelectorAll(".input-div__input");
 
 const nameChecker = (value) => {
   document.getElementById(

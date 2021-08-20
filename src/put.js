@@ -1,5 +1,6 @@
 import { getCharacter } from "./get.js";
 import { getDataInputs } from "./getDataInputs.js";
+import { del } from "./delete.js";
 import {
   countCheckerName,
   countCheckerShort,
@@ -40,6 +41,12 @@ const preparePut = async (id) => {
     if (characterData.image) {
       image.src = `data:image/png;base64,${characterData.image}`;
     }
+
+    // Add delete event on button
+    let btnDelete = document.getElementById("delete");
+    btnDelete.addEventListener("click", () => {
+      del(characterData.id);
+    });
   }
 
   document.getElementById("save").addEventListener("click", async () => {

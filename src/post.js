@@ -7,7 +7,7 @@ import { base64 } from "./previewFile.js";
 
 const preparePost = () => {
   document.getElementById("save").addEventListener("click", async () => {
-    const inputs = Array.from(document.querySelectorAll(".editor-input"));
+    const inputs = Array.from(document.querySelectorAll(".input-div__input"));
     const inputValues = inputs.map(({ value }) => value.trim());
     // Add base64 url at beginning of inputValues
     inputValues.unshift(base64);

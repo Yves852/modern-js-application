@@ -10,7 +10,7 @@ const renderListCharacters = (target, characters) => {
   // Loop on characters, create cards and add them to target
   characters.forEach((character) => {
     let clone = template.content.cloneNode(true);
-    clone.querySelector(".card__button").addEventListener("click", () => {
+    clone.querySelector(".card__btn").addEventListener("click", () => {
       // Onclick, Open a new tab of index.html with the character id as parameter
       window.open(`./index.html?id=${character.id}`, "_blank");
     });
@@ -55,19 +55,19 @@ const renderOneCharacter = (target, character) => {
   btnDelete.addEventListener("click", () => {
     del(character.id);
   });
-  // TODO apply sass updates when style.css is updated
-  btnUpdate.classList.add("btn", "edit-btn");
-  btnDelete.classList.add("btn", "edit-btn");
+  // Apply classes style and add ids
+  btnUpdate.classList.add("btn", "editor__btn", "editor__btn--save");
+  btnDelete.classList.add("btn", "editor__btn", "editor__btn--delete");
+  btnUpdate.id = "save";
   btnDelete.id = "delete";
 
   // Remove Add character and see character buttons, add update and delete buttons
-  let addCharacterButton = document.getElementsByClassName(
-    "card__button--addnew"
-  )[0];
+  let addCharacterButton =
+    document.getElementsByClassName("card__btn--addnew")[0];
   if (addCharacterButton) {
     document.body.removeChild(addCharacterButton);
   }
-  let btnSee = clone.children[0].getElementsByClassName("card__button")[0];
+  let btnSee = clone.children[0].getElementsByClassName("card__btn")[0];
   if (btnSee) {
     clone.children[0].removeChild(btnSee);
   }
