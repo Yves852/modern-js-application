@@ -17,8 +17,8 @@ const checkBarGet = () => {
 
 (() => {
   if (
-    window.location.pathname == "/dist/" ||
-    window.location.pathname == "/dist/index.html"
+    window.location.pathname == "/" ||
+    window.location.pathname == "/index.html"
   ) {
     // On load, fill the pool section with cards from characters
     displayCharacters();
@@ -37,7 +37,7 @@ const checkBarGet = () => {
     document.getElementById("addBtn").addEventListener("click", () => {
       window.open("./edit.html", "_self");
     });
-  } else if (window.location.pathname == "/dist/edit.html") {
+  } else if (window.location.pathname == "/edit.html") {
     prepareEdit();
   } else console.error("unknow path", window.location.pathname);
 })();
